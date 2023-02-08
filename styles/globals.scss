@@ -17,6 +17,8 @@ $lime: #acf16a;
 $blue: #85c5ed;
 $green: #009640;
 
+$black: #1d1d1b;
+
 $p: 18px;
 
 body{
@@ -25,6 +27,7 @@ body{
   margin: 0;
   background-color: $yellow;
   font-size: $p;
+  color: $black;
 }
 
 .special{

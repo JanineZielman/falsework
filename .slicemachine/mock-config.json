@@ -1,6 +1,7 @@
 {
   "_cts": {
-    "home": {}
+    "home": {},
+    "settings": {}
   },
   "slices": {
     "BigText": {

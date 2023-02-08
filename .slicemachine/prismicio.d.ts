@@ -57,7 +57,53 @@ type HomeDocumentDataSlicesSlice = BigTextSlice | ImageSlice | TitleTextSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
-export type AllDocumentTypes = HomeDocument;
+/** Content for Settings documents */
+interface SettingsDocumentData {
+    /**
+     * Site Title field in *Settings*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.site_title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    site_title: prismicT.KeyTextField;
+    /**
+     * Description field in *Settings*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    description: prismicT.KeyTextField;
+    /**
+     * Image field in *Settings*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Settings document from Prismic
+ *
+ * - **API ID**: `settings`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
+export type AllDocumentTypes = HomeDocument | SettingsDocument;
 /**
  * Primary content in BigText → Primary
  *
@@ -190,6 +236,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, BigTextSliceDefaultPrimary, BigTextSliceDefault, BigTextSliceVariation, BigTextSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, TitleTextSliceDefaultItem, TitleTextSliceDefault, TitleTextSliceVariation, TitleTextSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, BigTextSliceDefaultPrimary, BigTextSliceDefault, BigTextSliceVariation, BigTextSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, TitleTextSliceDefaultItem, TitleTextSliceDefault, TitleTextSliceVariation, TitleTextSlice };
     }
 }
