@@ -1,0 +1,23 @@
+{
+  "_cts": {
+    "home": {}
+  },
+  "slices": {
+    "BigText": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Image": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TitleText": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
+  }
+}

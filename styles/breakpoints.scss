@@ -1,0 +1,38 @@
+// phone
+@media only screen and (max-width: 900px) {
+    .flex{
+        flex-direction: column;
+    }
+    .big{
+        font-size: 18vw;
+    }
+    .big-text{
+        font-size: 20px;
+    }
+    .content{
+        width: 100%;
+        padding: 0;
+    }
+    .title-text{
+        .item{
+            width: 100%;
+        }
+    }
+} 
+
+// big screen
+@media only screen and (min-width: 1920px) {
+    body{
+        font-size: 24px;
+    }
+    .big-text{
+        font-size: 36px;
+    }
+    .content{
+        width: calc(95% - 400px);
+    }
+    
+    .sidebar{
+        width: 400px;
+    }
+} 

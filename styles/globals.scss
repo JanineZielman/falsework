@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Marist";
+  src: url("ABCMarist-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Falsework";
+  src: url("Falsework-Regular.otf") format("opentype");
+}
+
+$yellow: #ffff80;
+$lila: #99a6d5;
+$orange: #ff9800;
+$pink: #f9d5e1;
+$gold: #feca00;
+$lime: #acf16a;
+$blue: #85c5ed;
+$green: #009640;
+
+$p: 18px;
+
+body{
+  font-family: Marist;
+  padding: 0 2vw 2vw 2vw;
+  margin: 0;
+  background-color: $yellow;
+  font-size: $p;
+}
+
+.special{
+  font-family: Falsework;
+}
+
+.big{
+  font-size: 14vw;
+  line-height: 1;
+  margin: 0;
+  font-weight: 100;
+  padding: 0;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed black;
+}
+
+.flex{
+  display: flex;
+}
+
+.content{
+  width: calc(95% - 300px);
+  padding-right: 5%;
+  overflow-x: hidden;
+}
+
+.sidebar{
+  width: 300px;
+  p{
+    line-height: 1.3;
+  }
+}
+
+.big-text{
+  font-size: 24px;
+}
+
+.title-text{
+  justify-content: space-between;
+  h2{
+    margin-left: 24px;
+    font-weight: 100;
+  }
+  .item{
+    width: 48%;
+  }
+}
+
+.page-end{
+  font-size: 4vw;
+}
+
+.image{
+  width: 100%;
+  height: auto;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}

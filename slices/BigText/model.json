@@ -1,0 +1,28 @@
+{
+  "id": "big_text",
+  "type": "SharedSlice",
+  "name": "BigText",
+  "description": "BigText",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "BigText",
+      "primary": {
+        "big_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Big Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
