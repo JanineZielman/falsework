@@ -27,12 +27,12 @@ const Home = ({ page, settings }) => {
         <div className='flex'>
           <div className='content'>
             <SliceZone slices={page.data.slices} components={components} />
-            <div className='special page-end'>...........................................................................................................................................</div>
           </div>
           <div className='sidebar'>
             <PrismicRichText field={page.data.right_column_text}/>
           </div>
         </div>
+        <div className='special page-end'>-_-_-_-_-_-_-_-_-_-_-_</div>
       </div>
     </>
   )

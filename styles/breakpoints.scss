@@ -10,7 +10,7 @@
         font-size: 24px;
     }
     .page-end{
-        font-size: 24px;
+        // font-size: 24px;
     }
     .content{
         width: 100%;
@@ -21,6 +21,16 @@
             width: 100%;
         }
     }
+    .image{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 90%;
+        height: auto;
+    }
+    }
 } 
 
 // big screen
@@ -28,11 +38,8 @@
     body{
         font-size: 24px;
     }
-    .big-text{
-        // font-size: 42px;
-    }
     .page-end{
-        font-size: 42px;
+        // font-size: 42px;
     }
     .content{
         width: calc(95% - 400px);
