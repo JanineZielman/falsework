@@ -12,7 +12,6 @@ const Home = ({ page, settings }) => {
     document.body.style.backgroundColor= colors[number];
   },[]);
   
-  console.log(settings)
   return (
     <>
       <Head>
