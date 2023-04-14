@@ -20,6 +20,7 @@ $green: #009640;
 $black: #1d1d1b;
 
 $p: 18px;
+$small: 14px;
 
 body{
   font-family: Marist;
@@ -109,4 +110,8 @@ a{
     width: 100%;
     height: auto;
   }
+}
+
+.credits{
+  font-size: $small;
 }
