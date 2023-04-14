@@ -17,7 +17,7 @@
             "label": "Image",
             "constraint": {
               "width": 640,
-              "height": 480
+              "height": 0
             },
             "thumbnails": []
           }
