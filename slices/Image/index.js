@@ -10,7 +10,7 @@ const Image = ({ slice }) => {
   return(
     <section className='image'>
       <PrismicNextImage field={slice?.primary?.image} layout="intrinsic" />
-      <span className='credits'>{slice?.primary?.image?.copyright}</span>
+      <div className='credits'>{slice?.primary?.image?.copyright}</div>
     </section>
   )
 }
