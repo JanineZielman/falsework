@@ -3,9 +3,9 @@
     .flex{
         flex-direction: column;
     }
-    .big{
-        font-size: 18vw;
-    }
+    // .big{
+    //     font-size: 18vw;
+    // }
     .big-text{
         font-size: 24px;
     }
@@ -42,6 +42,49 @@
 @media only screen and (max-width: 600px) {
     .page-end{
         font-size: 19.3vw;
+    }
+    .menu{
+        margin-bottom: 0px;
+        margin-top: 0;
+        a{
+            font-size: 30px;
+            text-align: center;
+            padding: 5px;
+        }
+        
+    }
+    .big{
+        // font-size: 20vw;
+        // margin-top: -35px;
+        display: none;
+    }
+    .space{
+        h1{
+            display: none;
+        }
+    }
+    .back{
+        top: auto;
+        bottom: 25px;
+    }
+    .project{
+        .info{
+            h2, .caption{
+                width: 100%;
+            }
+        }
+    }
+    .image{
+        padding-bottom: 24px;
+    }
+    .slider{
+        .slick-prev, .slick-next{
+            &:before{
+                top: 40%;
+                width: 60px;
+                height: 60px;
+            }
+        }
     }
 }
 

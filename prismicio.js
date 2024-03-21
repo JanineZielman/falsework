@@ -10,6 +10,8 @@ export function linkResolver(doc) {
   switch (doc.type) {
     case 'home':
       return `/`
+    case 'page':
+      return `/${doc.uid}`
     default:
       return null
   }

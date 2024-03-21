@@ -12,6 +12,15 @@
           "placeholder": ""
         }
       },
+      "intro": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Intro",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,hyperlink,list-item,o-list-item,strong,em"
+        }
+      },
       "right_column_text": {
         "type": "StructuredText",
         "config": {
@@ -19,6 +28,48 @@
           "placeholder": "",
           "allowTargetBlank": true,
           "multi": "paragraph,hyperlink,list-item,o-list-item,strong,em"
+        }
+      },
+      "projects": {
+        "type": "Group",
+        "config": {
+          "label": "Projects",
+          "fields": {
+            "project": {
+              "type": "Link",
+              "config": {
+                "label": "Project",
+                "select": "document",
+                "customtypes": [
+                  "project"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "menu": {
+        "type": "Group",
+        "config": {
+          "label": "Menu",
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
+              }
+            },
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": ""
+              }
+            }
+          }
         }
       },
       "slices": {

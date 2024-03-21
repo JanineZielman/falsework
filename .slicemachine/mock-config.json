@@ -1,7 +1,14 @@
 {
   "_cts": {
-    "home": {},
-    "settings": {}
+    "home": {
+      "projects": {},
+      "menu": {}
+    },
+    "settings": {},
+    "page": {},
+    "project": {
+      "images": {}
+    }
   },
   "slices": {
     "BigText": {

@@ -1,5 +1,6 @@
 import '@/styles/globals.scss'
 import '@/styles/breakpoints.scss'
+
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "../prismicio";
 

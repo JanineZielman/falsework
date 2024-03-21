@@ -1,0 +1,56 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "recognize"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "front",
+    "type": "Text"
+  },
+  "images": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "image",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+                "width": 2747,
+                "height": 4120
+              },
+              "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?rect=0%2C0%2C2747%2C4120&w=720&h=1080",
+              "width": 720,
+              "height": 1080,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "images_caption": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Laborum consectetur ex fugiat anim sint in occaecat veniam cupidatat sint. Consequat ex labore officia."
+        }
+      }
+    ]
+  }
+}

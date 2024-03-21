@@ -22,6 +22,10 @@ $black: #1d1d1b;
 $p: 18px;
 $small: 14px;
 
+body, html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: Marist;
   padding: 0 2vw 2vw 2vw;
@@ -33,6 +37,7 @@ body{
 
 .special{
   font-family: Falsework;
+  font-weight: normal;
 }
 
 .big{
@@ -44,10 +49,71 @@ body{
   // margin-bottom: 24px;
 }
 
+.space{
+  display: flex;
+  justify-content: space-between;
+}
+
+.space .special{
+  padding-bottom: 100px;
+  font-size: 48px;
+  font-weight: normal;
+}
+
+.back{
+  width: 125px;
+  height: 125px;
+  mask-image: url(./SVG/back.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: right;
+  background-color: $black;
+  margin-right: 14px;
+  position: fixed;
+  top: 30px;
+  right: 14px;
+  transition: all 0.4s ease;
+}
+
+.arrow-down{
+  width: 125px;
+  height: 125px;
+  position: fixed;
+  mask-image: url(./SVG/arrow-down.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $black;
+  right: 0px;
+  bottom: 25px;
+  z-index: 99;
+  transform-style: preserve-3d;
+  transition: all 0.4s ease;
+}
+
+.about{
+  .big-text{
+    font-size: 32px;
+  }
+}
+
 a{
   color: inherit;
   text-decoration: none;
   border-bottom: 1px dashed black;
+}
+
+.menu{
+  margin-bottom: -7vw;
+  margin-top: 24px;
+  a{
+    border-bottom: none;
+    font-size: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    width: fit-content;
+  }
 }
 
 .flex{
@@ -76,18 +142,28 @@ a{
   }
 }
 
+.big-intro{
+  font-size: 50px;
+  margin-bottom: 48px;
+  p{
+    margin-top: 24px;
+    max-width: 1100px;
+  }
+}
+
 .title-text{
   width: 50%;
   display: inline-block;
   vertical-align: top;
   h2{
     margin: 0;
-    margin-top: 24px;
+    margin-top: 0;
     margin-left: 24px;
     font-weight: 100;
   }
   p{
     margin-top: 10px;
+    margin-bottom: 24px;
   }
   .item{
     width: 100%;
@@ -116,4 +192,87 @@ a{
   font-size: $small;
   width: 100%;
   display: block;
+}
+
+.slider{
+  max-width: 1300px;
+  .slide{
+    img{
+      height: auto;
+      width: 100%;
+      max-height: 90vh;
+      object-fit: cover;
+    }
+  }
+  .slick-prev{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: auto;
+    right: 50%;
+    &:before{
+      content: "";
+      background-color: black;
+      mask-image: url('./SVG/prev.svg');
+      mask-repeat: no-repeat;
+      width: 90px;
+      height: 90px;
+      display: block;
+      position: absolute;
+      top: 45%;
+      left: 14px;
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+    &:hover:before{
+      opacity: 1;
+    }
+  }
+  .slick-next{
+    width: 50%;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    &:before{
+      content: "";
+      background-color: black;
+      mask-image: url('./SVG/next.svg');
+      mask-repeat: no-repeat;
+      mask-position: right;
+      width: 90px;
+      height: 90px;
+      display: block;
+      right: 14px;
+      left: auto;
+      position: absolute;
+      top: 45%;
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+    &:hover:before{
+      opacity: 1;
+    }
+  }
+}
+
+
+.project{
+  margin-bottom: 48px;
+  .info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h2{
+      font-size: 50px;
+      margin: 0;
+      line-height: 1;
+    }
+    h2, .caption{
+      width: 45%;
+    }
+    .caption p em{
+      font-style: normal;
+    }
+  }
 }
