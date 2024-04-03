@@ -211,6 +211,17 @@ interface ProjectDocumentData {
 	title: prismic.KeyTextField;
 	
 	/**
+	 * Subtitle field in *Project*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.subtitle
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	subtitle: prismic.KeyTextField;
+	
+	/**
 	 * Images field in *Project*
 	 *
 	 * - **Field Type**: Group

@@ -15,7 +15,6 @@ $pink: #f9d5e1;
 $gold: #feca00;
 $lime: #acf16a;
 $blue: #85c5ed;
-$green: #009640;
 
 $black: #1d1d1b;
 
@@ -160,6 +159,7 @@ a{
     margin-top: 0;
     margin-left: 24px;
     font-weight: 100;
+    font-size: 30px;
   }
   p{
     margin-top: 10px;
@@ -267,6 +267,11 @@ a{
       font-size: 50px;
       margin: 0;
       line-height: 1;
+      span{
+        font-size: 30px;
+        display: block;
+        margin-top: 5px;
+      }
     }
     h2, .caption{
       width: 45%;

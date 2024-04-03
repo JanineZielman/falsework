@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 const Home = ({ page, settings }) => {
-  const colors = ['#ffff80', '#99a6d5', '#ff9800', '#f9d5e1', '#feca00', '#acf16a', '#85c5ed', '#009640']
+  const colors = ['#ffff80', '#99a6d5', '#ff9800', '#f9d5e1', '#feca00', '#acf16a', '#85c5ed']
   useEffect(() => {
     const number = Math.floor(Math.random() * colors.length);
     document.body.style.backgroundColor= colors[number];
@@ -30,16 +30,16 @@ const Home = ({ page, settings }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
       const position = window.pageYOffset;
-      console.log(document.body.scrollHeight -  window.innerHeight)
       setScrollPosition(position);
+      let scrollPad = 0;
       if (document.body.scrollHeight -  window.innerHeight <= window.pageYOffset + 100){
         document.getElementById('arrow').href="#top"
         document.getElementById('arrow').style.transform = 'rotateZ(180deg)';
         document.getElementById('arrow').style.bottom = '100px';
       } else{
-        document.getElementById('arrow').href="#project"
         document.getElementById('arrow').style.transform = 'rotateZ(0deg)';
         document.getElementById('arrow').style.bottom = '25px';
+        document.getElementById('arrow').href="#project0"
       }
   };
 
@@ -76,18 +76,22 @@ const Home = ({ page, settings }) => {
        
           {page.data.projects.map((item, i ) => {
             return(
-              <div className='project' id="project" key={`project${i}`}>
+              <div className='project' id={`project${i}`} key={`project${i}`}>
                 <Slider className='slider' {...settingsSlider}>
                   {item.project.data.images.map((img, j) => {
                     return(
-                      <div className="slide">
-                        <PrismicNextImage field={img.image}></PrismicNextImage>
+                      <div className="slide" key={`slide${j}`}>
+                        <PrismicNextImage field={img.image} alt=""></PrismicNextImage>
                       </div> 
                     )
                   })}
                 </Slider>
                 <div className='info'>
-                  <h2 className='special'>{item.project.data.title}</h2>
+                  <h2 className='special'>
+                    {item.project.data.title}
+                    <span className='special subtitle'>{item.project.data.subtitle}</span>
+                  </h2>
+                  
                   <div className='caption'>
                     <PrismicRichText field={item.project.data.images_caption}/>
                   </div>
@@ -95,7 +99,7 @@ const Home = ({ page, settings }) => {
               </div>
             )
           })}
-        <a id="arrow" className='arrow-down' href="#project"></a>
+        <a id="arrow" className='arrow-down' href="#project0"></a>
         <div className='special page-end'>-_-_-_-_-_-_-_-_-_-_-_</div>
       </div>
     </>
@@ -109,7 +113,7 @@ export async function getStaticProps({ locale, previewData }) {
 
   const page = await client.getSingle("home", { 
     lang: locale,
-    fetchLinks: `project.title, project.images, project.images_caption`
+    fetchLinks: `project.title, project.subtitle, project.images, project.images_caption`
 
   });
   const settings = await client.getSingle("settings", { lang: locale });

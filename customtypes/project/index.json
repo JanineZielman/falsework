@@ -19,6 +19,13 @@
           "placeholder": ""
         }
       },
+      "subtitle": {
+        "type": "Text",
+        "config": {
+          "label": "Subtitle",
+          "placeholder": ""
+        }
+      },
       "images": {
         "type": "Group",
         "config": {
