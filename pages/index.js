@@ -31,17 +31,36 @@ const Home = ({ page, settings }) => {
   const handleScroll = () => {
       const position = window.pageYOffset;
       setScrollPosition(position);
-      let scrollPad = 0;
       if (document.body.scrollHeight -  window.innerHeight <= window.pageYOffset + 100){
-        document.getElementById('arrow').href="#top"
         document.getElementById('arrow').style.transform = 'rotateZ(180deg)';
         document.getElementById('arrow').style.bottom = '100px';
-      } else{
+      } 
+      else{
         document.getElementById('arrow').style.transform = 'rotateZ(0deg)';
         document.getElementById('arrow').style.bottom = '25px';
-        document.getElementById('arrow').href="#project0"
       }
   };
+
+  function scrollTo(){
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+    for (let i = 0; i < document.getElementsByClassName('project').length; i++) {
+      if(document.getElementsByClassName('project')[i].offsetTop - 200 < scrollPosition + document.getElementsByClassName('project')[0].offsetTop){
+        if (document.body.scrollHeight -  window.innerHeight > window.pageYOffset + 124){
+          window.scrollTo({
+            top: document.getElementsByClassName('project')[i].offsetTop,
+            behavior: 'smooth'
+          });
+        } else {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+      
+      }
+    }
+  }
 
   useEffect(() => {
       window.addEventListener('scroll', handleScroll, { passive: true });
@@ -99,7 +118,7 @@ const Home = ({ page, settings }) => {
               </div>
             )
           })}
-        <a id="arrow" className='arrow-down' href="#project0"></a>
+        <div id="arrow" className='arrow-down' onClick={scrollTo}></div>
         <div className='special page-end'>-_-_-_-_-_-_-_-_-_-_-_</div>
       </div>
     </>
