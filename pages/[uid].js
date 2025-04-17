@@ -9,6 +9,16 @@ import { PrismicRichText } from '@prismicio/react'
 
 
 const Page = ({ settings, page }) => {
+  const colors = ['#ffff80', '#99a6d5', '#ff9800', '#f9d5e1', '#feca00', '#acf16a', '#85c5ed']
+  useEffect(() => {
+    const number = Math.floor(Math.random() * colors.length);
+    if (page.uid != "ricordi-di-venetia"){
+      document.body.style.backgroundColor= colors[number];
+    } else{
+      document.body.style.backgroundColor= '#fff';
+    }
+  },[]);
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
       const position = window.pageYOffset;
