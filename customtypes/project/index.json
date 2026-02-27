@@ -3,6 +3,7 @@
   "label": "Project",
   "repeatable": true,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "uid": {
@@ -52,6 +53,52 @@
           "placeholder": "",
           "allowTargetBlank": true,
           "multi": "paragraph,hyperlink,list-item,o-list-item"
+        }
+      },
+      "categories": {
+        "type": "Group",
+        "config": {
+          "label": "Categories",
+          "repeat": true,
+          "fields": {
+            "category": {
+              "type": "Link",
+              "config": {
+                "label": "Category",
+                "select": "document",
+                "repeat": false,
+                "customtypes": [
+                  {
+                    "id": "category",
+                    "fields": ["title"]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "right_column_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Right Column Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,strong,em,hyperlink,embed,list-item,o-list-item,rtl,heading2"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "text": {
+              "type": "SharedSlice"
+            },
+            "image": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     }

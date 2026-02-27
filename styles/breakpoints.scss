@@ -1,106 +1,185 @@
 // phone
 @media only screen and (max-width: 1100px) {
-    .flex{
+    .flex {
         flex-direction: column;
     }
-    .big-text{
+
+    .big-text,
+    .big-text p,
+    .about .big-text p {
         font-size: 24px;
     }
-    .big-intro{
+
+    .big-intro,
+    .big-intro p {
         font-size: 30px;
     }
-    .page-end{
+
+    .page-end {
         font-size: 10vw;
         max-width: 15ch;
     }
-    .content{
+
+    .content {
         width: 100%;
         padding: 0;
     }
-    .title-text{
+
+    .title-text {
         width: 100%;
-        .item{
+
+        .item {
             width: 100%;
         }
     }
-    .image{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-        img{
+
+    .image {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        img {
             width: 100%;
             height: auto;
         }
     }
-    .credits{
+
+    .credits {
         margin-top: 5px;
     }
-} 
+
+    .grid {
+        .grid-item {
+            width: 49%;
+            margin-right: 2%;
+
+            &:nth-child(2n) {
+                margin-right: 0%;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 2%;
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 600px) {
-    .page-end{
+    .page-end {
         font-size: 19.3vw;
     }
-    .menu{
+
+    .menu {
         margin-bottom: 0px;
         margin-top: 0;
-        a{
+
+        a {
             font-size: 30px;
             text-align: center;
             padding: 5px;
         }
-        
+
     }
-    .big{
-        // font-size: 20vw;
-        // margin-top: -35px;
-        display: none;
-    }
-    .space{
-        h1{
+
+    .space {
+        h1 {
             display: none;
         }
     }
-    .back{
+
+    .back {
         top: auto;
         bottom: 25px;
     }
-    .project{
-        .info{
-            h2, .caption{
-                width: 100%;
-            }
-        }
-    }
-    .image{
+
+    .image {
         padding-bottom: 24px;
     }
-    .slider{
-        .slick-prev, .slick-next{
-            &:before{
+
+    .slider {
+
+        .slick-prev,
+        .slick-next {
+            &:before {
                 top: 40%;
                 width: 60px;
                 height: 60px;
             }
         }
     }
+
+    .header {
+        h1 {
+            font-size: 60px;
+        }
+
+        .menu {
+            margin-top: 0;
+
+            a {
+                font-size: 18px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .projects-slider .slider .slide h2 {
+        font-size: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        p {
+            width: 100%;
+        }
+    }
+
+    .grid {
+        flex-direction: column;
+
+        .grid-item,
+        &.onderzoek .grid-item {
+            width: 100%;
+        }
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    .project {
+
+        h1,
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    .project-navigation img {
+        height: 50px;
+    }
+
 }
 
 // big screen
 @media only screen and (min-width: 1920px) {
-    body{
+    body {
         font-size: 24px;
     }
-    .page-end{
+
+    .page-end {
         // font-size: 42px;
     }
-    .content{
+
+    .content {
         width: calc(95% - 400px);
     }
-    
-    .sidebar{
+
+    .sidebar {
         width: 400px;
     }
-} 
+}

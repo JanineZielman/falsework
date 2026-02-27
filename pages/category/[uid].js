@@ -1,15 +1,15 @@
 import Head from "next/head";
-import { PrismicLink, SliceZone } from "@prismicio/react";
-import React, { useState, useEffect } from 'react';
-import * as prismicH from "@prismicio/helpers";
+import React, { useEffect } from 'react';
+import * as prismic from "@prismicio/client";
+import { SliceZone } from "@prismicio/react";
 
-import { createClient } from "../prismicio";
-import { components } from "../slices";
-import { PrismicRichText } from '@prismicio/react'
+import { components } from "../../slices";
+import { createClient } from "../../prismicio";
 import Layout from "@/components/layout";
+import { PrismicNextImage } from "@prismicio/next";
+import Link from "next/link";
 
-
-const Page = ({ settings, page, menu }) => {
+const Page = ({ settings, page, menu, projects }) => {
   const colors = ['#ffff80', '#99a6d5', '#ff9800', '#f9d5e1', '#feca00', '#acf16a', '#85c5ed']
   useEffect(() => {
     const number = Math.floor(Math.random() * colors.length);
@@ -19,6 +19,7 @@ const Page = ({ settings, page, menu }) => {
       document.body.style.backgroundColor = '#fff';
     }
   }, []);
+  console.log(projects)
 
   return (
     <>
@@ -31,13 +32,18 @@ const Page = ({ settings, page, menu }) => {
       </Head>
       <div className='container'>
         <Layout navigation={menu}>
-          <div className='flex'>
-            <div className='content about'>
-              <SliceZone slices={page.data.slices} components={components} />
-            </div>
-            <div className='sidebar'>
-              <PrismicRichText field={page.data.right_column_text} />
-            </div>
+          <SliceZone slices={page.data.slices} components={components} />
+          <div className={`grid ${page.uid}`}>
+            {projects.map((item, i) => {
+              return (
+                <div className="grid-item">
+                  <Link href={`/project/${item.uid}`}>
+                    <PrismicNextImage field={item.data.images[0].image} />
+                    <p>{item.data.title}</p>
+                  </Link>
+                </div>
+              )
+            })}
           </div>
           <div className='special page-end'>-_-_-_-_-_-_-_-_-_-_-_</div>
         </Layout>
@@ -51,15 +57,24 @@ export default Page;
 export async function getStaticProps({ params, previewData, locale }) {
   const client = createClient({ previewData });
 
-  const page = await client.getByUID("page", params.uid);
+  const page = await client.getByUID("category", params.uid);
   const settings = await client.getSingle("settings");
   const menu = await client.getSingle('menu', { lang: locale });
-
+  const projects = await client.getAllByType("project", {
+    predicates: [
+      prismic.predicate.at(
+        "my.project.categories.category",
+        page.id
+      ),
+    ],
+    lang: locale,
+  });
   return {
     props: {
       page,
       settings,
-      menu
+      menu,
+      projects
     },
   };
 }
@@ -67,7 +82,7 @@ export async function getStaticProps({ params, previewData, locale }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const pages = await client.getAllByType("page");
+  const pages = await client.getAllByType("category");
 
   return {
     paths: pages.map((page) => {

@@ -21,11 +21,20 @@ $black: #1d1d1b;
 $p: 18px;
 $small: 14px;
 
-body, html{
+body,
+html {
   scroll-behavior: smooth;
 }
 
-body{
+h2 {
+  font-weight: 300;
+}
+
+p {
+  font-size: 20px;
+}
+
+body {
   font-family: Marist;
   padding: 0 2vw 2vw 2vw;
   margin: 0;
@@ -34,32 +43,23 @@ body{
   color: $black;
 }
 
-.special{
+.special {
   font-family: Falsework;
   font-weight: normal;
 }
 
-.big{
-  font-size: 14vw;
-  line-height: 1.1;
-  margin: 0;
-  font-weight: 100;
-  padding: 0;
-  // margin-bottom: 24px;
-}
-
-.space{
+.space {
   display: flex;
   justify-content: space-between;
 }
 
-.space .special{
+.space .special {
   padding-bottom: 100px;
   font-size: 48px;
   font-weight: normal;
 }
 
-.back{
+.back {
   width: 125px;
   height: 125px;
   mask-image: url(./SVG/back.svg);
@@ -74,7 +74,7 @@ body{
   transition: all 0.4s ease;
 }
 
-.arrow-down{
+.arrow-down {
   width: 125px;
   height: 125px;
   position: fixed;
@@ -90,128 +90,209 @@ body{
   transition: all 0.4s ease;
 }
 
-.about{
-  .big-text{
+.about {
+
+  .big-text,
+  .big-text p {
     font-size: 32px;
   }
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
+}
+
+p a {
   border-bottom: 1px dashed black;
 }
 
-.menu{
-  margin-bottom: -7vw;
-  margin-top: 24px;
-  a{
-    border-bottom: none;
-    font-size: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: 0;
-    width: fit-content;
+.header {
+  h1 {
+    font-size: 120px;
+    margin: 0;
+  }
+
+  .menu {
+    display: flex;
+    margin-top: 14px;
+
+    a {
+      border-bottom: none;
+      font-size: 36px;
+      display: block;
+      width: fit-content;
+      margin-right: 36px;
+      line-height: 1;
+
+      &.active {
+        border-bottom: 2px dashed black;
+      }
+    }
   }
 }
 
-.flex{
+footer {
+  display: flex;
+
+  p {
+    margin-right: 24px;
+    width: 30%;
+  }
+}
+
+.flex {
   display: flex;
 }
 
-.content{
+.content {
   width: calc(95% - 300px);
   padding-right: 5%;
   overflow-x: hidden;
 }
 
-.sidebar{
-  width: 300px;
-  p{
+.sidebar {
+  width: 500px;
+
+  p {
     line-height: 1.3;
-    margin-top: 34px;
+  }
+
+  strong {
+    font-weight: regular;
+    border-bottom: 1px dashed black;
+  }
+
+  h2 {
+    margin-left: 36px;
+    margin-bottom: -14px;
   }
 }
 
-.big-text{
+.text-block {
+  max-width: 900px;
+
+  h2 {
+    margin-left: 36px;
+    margin-bottom: -14px;
+  }
+}
+
+.big a {
+  border-bottom: none;
+}
+
+.big-text {
   font-size: 2.2vw;
   margin-bottom: 48px;
-  p{
+
+  p {
+    font-size: 2.2vw;
     margin-top: 24px;
   }
 }
 
-.big-intro{
-  font-size: 50px;
-  margin-bottom: 48px;
-  p{
+.big-intro,
+.big-intro p {
+  font-size: 40px;
+  // margin-bottom: 48px;
+
+  p {
     margin-top: 24px;
     max-width: 1100px;
   }
 }
 
-.title-text{
+.title-text {
   width: 50%;
   display: inline-block;
   vertical-align: top;
-  h2{
+
+  h2 {
     margin: 0;
     margin-top: 0;
     margin-left: 24px;
     font-weight: 100;
     font-size: 30px;
   }
-  p{
+
+  p {
     margin-top: 10px;
     margin-bottom: 24px;
   }
-  .item{
+
+  .item {
     width: 100%;
   }
 }
 
-.page-end{
+.page-end {
   font-size: 8.7vw;
   white-space: nowrap;
   width: 100%;
   overflow-x: hidden;
 }
 
-.image{
+.image {
   width: 45%;
   height: auto;
   display: inline-block;
   margin-right: 5%;
-  img{
+
+  img {
     width: 100%;
     height: auto;
   }
 }
 
-.credits{
+.credits {
   font-size: $small;
   width: 100%;
   display: block;
 }
 
-.slider{
+.projects-slider {
+  margin-top: 24px;
+
+  .slider {
+    max-width: 100%;
+
+    .slide {
+      img {
+        max-height: 70vh;
+      }
+
+      h2 {
+        font-size: 40px;
+        margin: 10px 0;
+      }
+
+      border-bottom: none;
+    }
+  }
+}
+
+.slider {
   max-width: 1300px;
-  .slide{
-    img{
+
+  .slide {
+    img {
       height: auto;
       width: 100%;
       max-height: 90vh;
       object-fit: cover;
     }
   }
-  .slick-prev{
+
+  .slick-prev {
     width: 50%;
-    height: 100%;
+    height: 80%;
     position: absolute;
     z-index: 2;
     left: auto;
     right: 50%;
-    &:before{
+
+    &:before {
       content: "";
       background-color: black;
       mask-image: url('./SVG/prev.svg');
@@ -225,16 +306,19 @@ a{
       opacity: 0;
       transition: all 0.4s ease;
     }
-    &:hover:before{
+
+    &:hover:before {
       opacity: 1;
     }
   }
-  .slick-next{
+
+  .slick-next {
     width: 50%;
     right: 0;
-    height: 100%;
+    height: 80%;
     position: absolute;
-    &:before{
+
+    &:before {
       content: "";
       background-color: black;
       mask-image: url('./SVG/next.svg');
@@ -250,35 +334,77 @@ a{
       opacity: 0;
       transition: all 0.4s ease;
     }
-    &:hover:before{
+
+    &:hover:before {
       opacity: 1;
     }
   }
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
 
-.project{
-  // margin-bottom: 48px;
-  padding: 24px 0;
-  .info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    h2{
-      font-size: 50px;
-      margin: 0;
-      line-height: 1;
-      span{
-        font-size: 30px;
-        display: block;
-        margin-top: 5px;
+  &.onderzoek {
+    .grid-item {
+      width: 49%;
+      margin-right: 2%;
+
+      &:nth-child(3n) {
+        margin-right: 2%;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0%;
       }
     }
-    h2, .caption{
-      width: 45%;
+  }
+
+  .grid-item {
+    width: 32%;
+    margin-right: 1.5%;
+
+    &:nth-child(3n) {
+      margin-right: 0;
     }
-    .caption p em{
-      font-style: normal;
+
+    img {
+      width: 100%;
+      height: auto;
     }
+
+    p {
+      margin-top: 5px;
+    }
+  }
+}
+
+.project {
+  .flex {
+    margin-top: 48px;
+  }
+
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 36px;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 36px;
+  }
+}
+
+.project-navigation {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -20px;
+
+  img {
+    height: 80px;
+    width: auto;
   }
 }

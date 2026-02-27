@@ -1,0 +1,132 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "lose"
+    },
+    "title": {
+      "__TYPE__": "FieldContent",
+      "value": "gate",
+      "type": "Text"
+    },
+    "right_column_text": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Dolore dolore non sint anim reprehenderit esse laboris."
+          }
+        }
+      ]
+    },
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": [
+        {
+          "key": "big_text$78f0361c-9404-4337-9a80-254dfa95d92b",
+          "name": "big_text",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "big_text": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Culpa exercitation magna cillum elit Lorem dolor magna. Adipisicing qui velit laborum dolor enim est eiusmod sint elit."
+                    }
+                  }
+                ]
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "image$ad0eb274-deee-4ce7-a544-ac083968c581",
+          "name": "image",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "image": {
+                "__TYPE__": "ImageContent",
+                "origin": {
+                  "id": "main",
+                  "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+                  "width": 3168,
+                  "height": 4752
+                },
+                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?rect=0%2C0%2C3168%2C4752&w=640&h=960",
+                "width": 640,
+                "height": 960,
+                "edit": {
+                  "zoom": 1,
+                  "crop": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "background": "transparent"
+                },
+                "alt": "climate",
+                "thumbnails": {}
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "title_text$965faa90-5640-4705-a1c6-97311c26ece4",
+          "name": "title_text",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {},
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": [
+                  [
+                    "title",
+                    {
+                      "__TYPE__": "FieldContent",
+                      "value": "noise",
+                      "type": "Text"
+                    }
+                  ],
+                  [
+                    "text",
+                    {
+                      "__TYPE__": "StructuredTextContent",
+                      "value": [
+                        {
+                          "type": "paragraph",
+                          "content": {
+                            "text": "Aute eu ad quis pariatur. Voluptate do sit ea dolor excepteur ipsum ipsum cillum in velit voluptate amet amet in."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]
