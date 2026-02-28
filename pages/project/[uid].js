@@ -95,7 +95,6 @@ const Page = ({ settings, page, menu, projectsInCategory }) => {
               </div>
             </>
           )}
-
           <div className='special page-end'>______________________</div>
         </Layout>
       </div>
