@@ -15,11 +15,6 @@
         font-size: 30px;
     }
 
-    .page-end {
-        font-size: 10vw;
-        max-width: 15ch;
-    }
-
     .content {
         width: 100%;
         padding: 0;
@@ -67,10 +62,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .page-end {
-        font-size: 19.3vw;
-    }
-
     .menu {
         margin-bottom: 0px;
         margin-top: 0;
@@ -169,10 +160,6 @@
 @media only screen and (min-width: 1920px) {
     body {
         font-size: 24px;
-    }
-
-    .page-end {
-        // font-size: 42px;
     }
 
     .content {

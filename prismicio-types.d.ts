@@ -292,6 +292,56 @@ interface MenuDocumentData {
 export type MenuDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
 
+/**
+ * Content for News documents
+ */
+interface NewsDocumentData {
+  /**
+   * Title field in *News*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Text field in *News*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * Image field in *News*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * News document from Prismic
+ *
+ * - **API ID**: `news`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NewsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<NewsDocumentData>, "news", Lang>;
+
 type PageDocumentDataSlicesSlice = BigTextSlice | ImageSlice | TitleTextSlice;
 
 /**
@@ -534,6 +584,7 @@ export type AllDocumentTypes =
   | CategoryDocument
   | HomeDocument
   | MenuDocument
+  | NewsDocument
   | PageDocument
   | ProjectDocument
   | SettingsDocument;
@@ -753,6 +804,8 @@ declare module "@prismicio/client" {
       HomeDocumentDataSlicesSlice,
       MenuDocument,
       MenuDocumentData,
+      NewsDocument,
+      NewsDocumentData,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,

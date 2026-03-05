@@ -82,7 +82,7 @@ const Page = ({ settings, page, menu, projectsInCategory }) => {
 
           {otherProjects.length > 0 && (
             <>
-              <div className='special page-end'>-_-_-_-_-_-_-_-_-_-_-_</div>
+              <div className='special page-end'></div>
               <div className="grid all-projects">
                 {otherProjects.map(p => (
                   <div key={p.id} className="grid-item">
@@ -95,7 +95,7 @@ const Page = ({ settings, page, menu, projectsInCategory }) => {
               </div>
             </>
           )}
-          <div className='special page-end'>______________________</div>
+          <div className='special page-end page-end2'></div>
         </Layout>
       </div>
     </>

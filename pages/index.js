@@ -21,7 +21,9 @@ const Home = ({ page, settings, menu }) => {
     dots: false,
     fade: true,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -52,11 +54,11 @@ const Home = ({ page, settings, menu }) => {
 
             </Slider>
           </div>
-          <div className='special page-end'>-_-_-_-_-_-_-_-_-_-_-_</div>
+          <div className='special page-end'></div>
           <section className='big-intro special'>
             <PrismicRichText field={page.data.intro} />
           </section>
-          <div className='special page-end'>______________________</div>
+          <div className='special page-end page-end3'></div>
         </Layout>
       </div>
     </>

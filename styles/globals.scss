@@ -167,9 +167,19 @@ footer {
   }
 
   h2 {
+    margin-top: 5px;
     margin-left: 36px;
     margin-bottom: -14px;
   }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.news-item {
+  margin-bottom: 30px;
 }
 
 .text-block {
@@ -230,11 +240,21 @@ footer {
 }
 
 .page-end {
-  font-size: 8.7vw;
-  white-space: nowrap;
-  width: 100%;
-  overflow-x: hidden;
+  background-image: url('/line2.svg');
+  width: auto;
+  height: 35px;
+  background-repeat: no-repeat;
+  margin: 48px 0 0 0;
 }
+
+.page-end.page-end2 {
+  background-image: url('/line3.svg');
+}
+
+.page-end.page-end3 {
+  background-image: url('/line4.svg');
+}
+
 
 .image {
   width: 45%;
@@ -415,7 +435,7 @@ footer {
   margin-bottom: -20px;
 
   img {
-    height: 80px;
+    height: 60px;
     width: auto;
   }
 }

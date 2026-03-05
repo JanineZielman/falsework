@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 27.8.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_2_00000178886693485298809420000002251723813253090237_"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 666.6 471.1"
-	 style="enable-background:new 0 0 666.6 471.1;" xml:space="preserve">
-<g id="Ebene_1">
-	<path d="M162.5,112.8V37.1h132v19.3h64.6v37.8h-64.5v56.4H162.5V112.8L162.5,112.8z M294.5,0h64.6v37.1h-64.5L294.5,0L294.5,0z
-		 M162.5,188.4H97.2v-37.8h65.3V188.4z M162.5,358.3v-37.8h132v56.4h64.6v37.8h-64.5V434H162.5V358.3L162.5,358.3z M294.5,471.1V434
-		h64.6v37.1H294.5L294.5,471.1z M667.7,188.4v37.1H162.5v-37.1H667.7z M667.7,244.8v37.8H162.5v-37.8H667.7z M0,282.7v-94.2h162.5
-		v94.2H0z M162.5,320.5H97.2v-37.8h65.3V320.5L162.5,320.5z"/>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 157.42 102.03">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path d="m157.42,69.42h-9.79v-36.8h9.79v36.8Zm-14.78,0h-9.79v-36.8h9.79v36.8Zm-14.97,0h-9.6v-36.8h9.6v36.8Zm-14.78,0h-9.79v-36.8h9.79v36.8Zm-14.78,0h-9.79v-36.8h9.79v36.8Zm-14.97,0h-9.6v-36.8h9.6v36.8Z" style="fill: #1d1d1b; stroke-width: 0px;"/>
+      <rect y="41.68" width="9.79" height="18.68" style="fill: #1d1d1b; stroke-width: 0px;"/>
+      <rect x="14.93" y="32.62" width="9.79" height="36.8" style="fill: #1d1d1b; stroke-width: 0px;"/>
+      <rect x="29.85" y="21.74" width="9.79" height="58.54" style="fill: #1d1d1b; stroke-width: 0px;"/>
+      <rect x="44.78" y="10.87" width="9.79" height="80.29" style="fill: #1d1d1b; stroke-width: 0px;"/>
+      <rect x="59.7" width="9.79" height="102.03" style="fill: #1d1d1b; stroke-width: 0px;"/>
+    </g>
+  </g>
 </svg>
