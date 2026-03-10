@@ -105,7 +105,10 @@ a {
 }
 
 p a {
-  border-bottom: 1px dashed black;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
 .header {
@@ -201,6 +204,7 @@ footer {
 }
 
 .big-text {
+  max-width: 1100px;
   font-size: 36px;
   margin-bottom: 48px;
 

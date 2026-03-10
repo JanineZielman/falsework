@@ -7,14 +7,14 @@ import { PrismicRichText } from '@prismicio/react'
  * @param { TitleTextProps }
  */
 const TitleText = ({ slice }) => {
-  return(
+  return (
     <>
       <section className='title-text flex'>
         {slice.items.map((item, i) => {
-          return(
+          return (
             <div className='item' key={`item${i}`}>
-              <h2 className='special'>{item.title}</h2>
-              <PrismicRichText field={item.text}/>
+              <h2>{item.title}</h2>
+              <PrismicRichText field={item.text} />
             </div>
           )
         })}
