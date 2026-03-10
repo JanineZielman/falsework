@@ -17,15 +17,16 @@ const Home = ({ page, settings, menu }) => {
     document.body.style.backgroundColor = colors[number];
   }, []);
 
+  const startSlide = Math.floor(Math.random() * page.data.projects.length);
+
   var settingsSlider = {
     dots: false,
     fade: true,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    initialSlide: startSlide,
   };
 
   return (

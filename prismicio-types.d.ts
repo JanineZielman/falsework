@@ -88,6 +88,21 @@ interface CategoryDocumentData {
   title: prismic.KeyTextField;
 
   /**
+   * Color field in *Category*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: lila
+   * - **API ID Path**: category.color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  color: prismic.SelectField<
+    "lila" | "yellow" | "orange" | "pink" | "gold" | "lime" | "blue",
+    "filled"
+  >;
+
+  /**
    * Slice Zone field in *Category*
    *
    * - **Field Type**: Slice Zone
@@ -371,6 +386,21 @@ interface PageDocumentData {
   right_column_text: prismic.RichTextField;
 
   /**
+   * Color field in *Page*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: lila
+   * - **API ID Path**: page.color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  color: prismic.SelectField<
+    "lila" | "yellow" | "orange" | "pink" | "gold" | "lime" | "blue",
+    "filled"
+  >;
+
+  /**
    * Slice Zone field in *Page*
    *
    * - **Field Type**: Slice Zone
@@ -497,6 +527,21 @@ interface ProjectDocumentData {
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
   right_column_text: prismic.RichTextField;
+
+  /**
+   * Color field in *Project*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: lila
+   * - **API ID Path**: project.color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  color: prismic.SelectField<
+    "lila" | "yellow" | "orange" | "pink" | "gold" | "lime" | "blue",
+    "filled"
+  >;
 
   /**
    * Slice Zone field in *Project*

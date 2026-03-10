@@ -46,6 +46,7 @@ body {
 .special {
   font-family: Falsework;
   font-weight: normal;
+  line-height: 1;
 }
 
 .space {
@@ -115,19 +116,19 @@ p a {
 
   .menu {
     display: flex;
-    margin-top: 14px;
+    margin-top: 24px;
 
     a {
-      font-size: 30px;
+      font-size: 24px;
       display: block;
       width: fit-content;
       margin-right: 36px;
-      line-height: 1;
-      border-bottom: 2px dashed transparent;
+      line-height: 0.8;
+      border-bottom: 3px dashed transparent;
 
       &.active,
       &:hover {
-        border-bottom: 2px dashed black;
+        border-bottom: 3px dashed black;
       }
     }
   }
@@ -136,6 +137,7 @@ p a {
 footer {
   display: flex;
   font-size: 16px;
+  padding-top: 14px;
 
   p {
     margin-right: 24px;
@@ -162,14 +164,17 @@ footer {
   }
 
   strong {
-    font-weight: regular;
-    border-bottom: 1px dashed black;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1px;
   }
 
   h2 {
     margin-top: 5px;
     margin-left: 36px;
     margin-bottom: -14px;
+    font-size: 26px;
   }
 
   img {
@@ -179,7 +184,7 @@ footer {
 }
 
 .news-item {
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .text-block {
@@ -226,7 +231,7 @@ footer {
     margin-top: 0;
     margin-left: 24px;
     font-weight: 100;
-    font-size: 30px;
+    font-size: 26px;
   }
 
   p {
@@ -242,17 +247,19 @@ footer {
 .page-end {
   background-image: url('/line2.svg');
   width: auto;
-  height: 35px;
-  background-repeat: no-repeat;
+  height: 15px;
+  background-repeat: repeat-x;
   margin: 48px 0 0 0;
 }
 
 .page-end.page-end2 {
   background-image: url('/line3.svg');
+  height: 22px;
 }
 
 .page-end.page-end3 {
   background-image: url('/line4.svg');
+  height: 9px;
 }
 
 
@@ -319,10 +326,10 @@ footer {
     &:before {
       content: "";
       background-color: black;
-      mask-image: url('./SVG/prev.svg');
+      mask-image: url('/arrow-left.svg');
       mask-repeat: no-repeat;
-      width: 90px;
-      height: 90px;
+      width: 150px;
+      height: 150px;
       display: block;
       position: absolute;
       top: 45%;
@@ -345,11 +352,11 @@ footer {
     &:before {
       content: "";
       background-color: black;
-      mask-image: url('./SVG/next.svg');
+      mask-image: url('/arrow-right.svg');
       mask-repeat: no-repeat;
       mask-position: right;
-      width: 90px;
-      height: 90px;
+      width: 150px;
+      height: 150px;
       display: block;
       right: 14px;
       left: auto;
@@ -412,7 +419,7 @@ footer {
 
     h2 {
       margin-top: 0;
-      font-size: 30px;
+      font-size: 26px;
     }
   }
 
@@ -435,7 +442,7 @@ footer {
   margin-bottom: -20px;
 
   img {
-    height: 60px;
+    height: 50px;
     width: auto;
   }
 }

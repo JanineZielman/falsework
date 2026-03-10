@@ -3,6 +3,7 @@
   "label": "Page",
   "repeatable": true,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "uid": {
@@ -26,6 +27,23 @@
           "placeholder": "",
           "allowTargetBlank": true,
           "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+        }
+      },
+      "color": {
+        "type": "Select",
+        "config": {
+          "label": "Color",
+          "placeholder": "",
+          "options": [
+            "lila",
+            "yellow",
+            "orange",
+            "pink",
+            "gold",
+            "lime",
+            "blue"
+          ],
+          "default_value": "lila"
         }
       },
       "slices": {

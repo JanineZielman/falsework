@@ -59,17 +59,28 @@
             }
         }
     }
+
+    .page-end {
+        height: 10px;
+        background-size: cover;
+    }
+
+    .page-end.page-end2 {
+        height: 15px;
+    }
+
+    .page-end.page-end3 {
+        height: 6px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .menu {
         margin-bottom: 0px;
-        margin-top: 0;
 
         a {
             font-size: 30px;
             text-align: center;
-            padding: 5px;
         }
 
     }
@@ -107,11 +118,15 @@
         }
 
         .menu {
-            margin-top: 0;
-
             a {
                 font-size: 18px;
-                margin-right: 10px;
+                margin-right: 14px;
+                border-width: 2px;
+
+                &:hover,
+                &.active {
+                    border-width: 2px;
+                }
             }
         }
     }
@@ -151,7 +166,7 @@
     }
 
     .project-navigation img {
-        height: 50px;
+        height: 30px;
     }
 
 }

@@ -19,6 +19,23 @@
           "placeholder": ""
         }
       },
+      "color": {
+        "type": "Select",
+        "config": {
+          "label": "Color",
+          "placeholder": "",
+          "options": [
+            "lila",
+            "yellow",
+            "orange",
+            "pink",
+            "gold",
+            "lime",
+            "blue"
+          ],
+          "default_value": "lila"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

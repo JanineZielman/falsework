@@ -11,15 +11,23 @@ import { PrismicNextImage } from "@prismicio/next";
 
 
 const Page = ({ settings, page, menu, news }) => {
-  const colors = ['#ffff80', '#99a6d5', '#ff9800', '#f9d5e1', '#feca00', '#acf16a', '#85c5ed']
+  const colors = {
+    yellow: "#ffff80",
+    lila: "#99a6d5",
+    orange: "#ff9800",
+    pink: "#f9d5e1",
+    gold: "#feca00",
+    lime: "#acf16a",
+    blue: "#85c5ed",
+  };
   useEffect(() => {
-    const number = Math.floor(Math.random() * colors.length);
-    if (page.uid != "ricordi-di-venetia") {
-      document.body.style.backgroundColor = colors[number];
+    if (page.uid !== "ricordi-di-venetia") {
+      const selectedColor = colors[page.data.color] ?? "#99a6d5";
+      document.body.style.backgroundColor = selectedColor || "#fff";
     } else {
-      document.body.style.backgroundColor = '#fff';
+      document.body.style.backgroundColor = "#fff";
     }
-  }, []);
+  }, [page]);
 
   return (
     <>
