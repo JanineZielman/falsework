@@ -183,6 +183,8 @@ footer {
   img {
     width: 100%;
     height: auto;
+    aspect-ratio: 16/11;
+    object-fit: cover;
   }
 }
 
@@ -251,19 +253,19 @@ footer {
 .page-end {
   background-image: url('/line2.svg');
   width: auto;
-  height: 15px;
+  height: 8px;
   background-repeat: repeat-x;
   margin: 48px 0 0 0;
 }
 
 .page-end.page-end2 {
   background-image: url('/line3.svg');
-  height: 22px;
+  height: 11px;
 }
 
 .page-end.page-end3 {
   background-image: url('/line4.svg');
-  height: 9px;
+  height: 5px;
 }
 
 
@@ -391,8 +393,9 @@ footer {
 
   &.onderzoek {
     .grid-item {
-      width: 49%;
-      margin-right: 2%;
+      width: 48%;
+      margin-right: 4%;
+      margin-bottom: 2%;
 
       &:nth-child(3n) {
         margin-right: 2%;

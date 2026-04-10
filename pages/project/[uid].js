@@ -69,7 +69,7 @@ const Page = ({ settings, page, menu, projectsInCategory }) => {
 
           <div className="project">
             <h1 className='special'>{page.data.title}</h1>
-            <h2 className="special">{page.data.subtitle}</h2>
+            <h2>{page.data.subtitle}</h2>
             <div className='flex'>
               <div className='content about'>
                 <SliceZone slices={page.data.slices} components={components} />
