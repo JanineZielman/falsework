@@ -75,7 +75,7 @@ export async function getStaticProps({ params, previewData, locale }) {
   const news = await client.getAllByType('news', {
     lang: locale,
     orderings: {
-      field: 'my.news.title',
+      field: 'my.news.date',
       direction: 'desc'
     }
   });

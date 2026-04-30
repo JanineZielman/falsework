@@ -21,7 +21,7 @@ const Home = ({ page, settings, menu }) => {
 
   var settingsSlider = {
     dots: false,
-    fade: true,
+    fade: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
