@@ -104,6 +104,13 @@
           "default_value": "lila"
         }
       },
+      "date": {
+        "type": "Date",
+        "config": {
+          "label": "Date (for order)",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

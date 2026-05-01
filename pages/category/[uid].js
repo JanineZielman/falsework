@@ -68,6 +68,10 @@ export async function getStaticProps({ params, previewData, locale }) {
   const settings = await client.getSingle("settings");
   const menu = await client.getSingle('menu', { lang: locale });
   const projects = await client.getAllByType("project", {
+    orderings: {
+      field: 'my.project.date',
+      direction: 'desc'
+    },
     predicates: [
       prismic.predicate.at(
         "my.project.categories.category",
