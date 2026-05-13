@@ -182,7 +182,6 @@ footer {
     margin-bottom: -10px;
     font-size: 26px;
     line-height: 1;
-    display: none;
   }
 
   img {
@@ -478,4 +477,8 @@ footer {
     height: 50px;
     width: auto;
   }
+}
+
+.project .flex .sidebar h2 {
+  display: none;
 }
