@@ -127,11 +127,15 @@ p a {
       width: fit-content;
       margin-right: 36px;
       line-height: 0.8;
-      border-bottom: 2px dashed transparent;
+      // border-bottom: 2px dashed transparent;
 
       &.active,
       &:hover {
-        border-bottom: 2px dashed black;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+        // border-bottom: 2px dashed black;
       }
     }
   }
@@ -168,7 +172,7 @@ footer {
 
   strong {
     text-decoration: underline;
-    text-decoration-style: dashed;
+    text-decoration-style: solid;
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
   }
@@ -178,6 +182,7 @@ footer {
     margin-bottom: -10px;
     font-size: 26px;
     line-height: 1;
+    display: none;
   }
 
   img {
@@ -425,10 +430,20 @@ footer {
       aspect-ratio: 16/11;
     }
 
+    h2 {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+
     p {
       margin-top: 5px;
     }
   }
+}
+
+.news-link {
+  margin-top: 48px;
+  display: block;
 }
 
 .project {

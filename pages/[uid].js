@@ -2,6 +2,7 @@ import Head from "next/head";
 import { PrismicLink, SliceZone } from "@prismicio/react";
 import React, { useState, useEffect } from 'react';
 import * as prismicH from "@prismicio/helpers";
+import Link from "next/link";
 
 import { createClient } from "../prismicio";
 import { components } from "../slices";
@@ -54,6 +55,9 @@ const Page = ({ settings, page, menu, news }) => {
                   </div>
                 )
               })}
+              <p className="news-link">
+                <Link href="/news">Meer nieuws</Link>
+              </p>
               {/* <PrismicRichText field={page.data.right_column_text} /> */}
             </div>
           </div>
@@ -74,6 +78,7 @@ export async function getStaticProps({ params, previewData, locale }) {
   const menu = await client.getSingle('menu', { lang: locale });
   const news = await client.getAllByType('news', {
     lang: locale,
+    pageSize: 3,
     orderings: {
       field: 'my.news.date',
       direction: 'desc'
