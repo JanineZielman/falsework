@@ -231,8 +231,21 @@ footer {
   }
 }
 
+.about .image {
+  margin-bottom: 24px;
+}
+
+.about .title-text {
+  padding-right: 1%;
+
+  &:nth-child(5) {
+    padding-right: 0;
+    padding-left: 1%;
+  }
+}
+
 .title-text {
-  width: 50%;
+  width: 49%;
   display: inline-block;
   vertical-align: top;
 

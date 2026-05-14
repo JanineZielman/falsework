@@ -10,6 +10,15 @@
         font-size: 24px;
     }
 
+    .about .title-text {
+        padding-right: 0%;
+
+        &:nth-child(5) {
+            padding-right: 0;
+            padding-left: 0%;
+        }
+    }
+
     .big-intro,
     .big-intro p {
         font-size: 30px;
