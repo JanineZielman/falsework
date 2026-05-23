@@ -6,6 +6,17 @@ import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
 
 const NewsIndex = ({ settings, menu, news }) => {
+  const formatNewsDate = (dateValue) => {
+    if (!dateValue) return "";
+
+    const date = new Date(dateValue);
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+
+    return `${day}.${month}.${year}`;
+  };
+
   const colors = {
     yellow: "#ffff80",
     lila: "#99a6d5",
@@ -31,11 +42,12 @@ const NewsIndex = ({ settings, menu, news }) => {
       </Head>
       <div className="container">
         <Layout navigation={menu}>
-          <div className="grid ontwerp">
+          <div className="grid ontwerp news-grid">
             {news.map((item, i) => {
               return (
                 <div className="grid-item" key={`news${i}`}>
                   <PrismicNextImage field={item.data.image} />
+                  <p className="news-date">{formatNewsDate(item.data.date)}</p>
                   <h2>{item.data.title}</h2>
                   <PrismicRichText field={item.data.text} />
                 </div>

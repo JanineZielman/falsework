@@ -458,6 +458,29 @@ footer {
   display: block;
 }
 
+.news-grid {
+  .grid-item {
+    width: 23.5%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+
+    &:nth-child(3n) {
+      margin-right: 2%;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    .news-date {
+      margin-top: 8px;
+      margin-bottom: 0;
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+  }
+}
+
 .project {
   .flex {
     margin-top: 48px;

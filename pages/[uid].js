@@ -46,19 +46,7 @@ const Page = ({ settings, page, menu, news }) => {
               <SliceZone slices={page.data.slices} components={components} />
             </div>
             <div className='sidebar'>
-              {news.map((item, i) => {
-                return (
-                  <div className="news-item" key={`news${i}`}>
-                    <PrismicNextImage field={item.data.image} />
-                    <h2>{item.data.title}</h2>
-                    <PrismicRichText field={item.data.text} />
-                  </div>
-                )
-              })}
-              <p className="news-link">
-                <Link href="/news">Meer nieuws</Link>
-              </p>
-              {/* <PrismicRichText field={page.data.right_column_text} /> */}
+              <PrismicRichText field={page.data.right_column_text} />
             </div>
           </div>
           <div className='special page-end'></div>
