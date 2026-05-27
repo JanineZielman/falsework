@@ -1,0 +1,64 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "traffic"
+    },
+    "title": {
+      "__TYPE__": "FieldContent",
+      "value": "pupil",
+      "type": "Text"
+    },
+    "subtitle": {
+      "__TYPE__": "FieldContent",
+      "value": "syllable",
+      "type": "Text"
+    },
+    "images": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "image",
+              {
+                "__TYPE__": "ImageContent",
+                "origin": {
+                  "id": "main",
+                  "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+                  "width": 3424,
+                  "height": 3424
+                },
+                "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?rect=0%2C0%2C3424%2C3424&w=1080&h=1080",
+                "width": 1080,
+                "height": 1080,
+                "edit": {
+                  "zoom": 1,
+                  "crop": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "background": "transparent"
+                },
+                "alt": "directly",
+                "thumbnails": {}
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "images_caption": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Tempor voluptate enim qui est enim. Do sint adipisicing elit labore dolor Lorem."
+          }
+        }
+      ]
+    }
+  }
+]

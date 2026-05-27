@@ -1,16 +1,15 @@
 {
-  "id": "page",
-  "label": "Page",
+  "format": "custom",
+  "id": "category",
+  "label": "Category",
   "repeatable": true,
   "status": true,
-  "format": "custom",
   "json": {
     "Main": {
       "uid": {
         "type": "UID",
         "config": {
-          "label": "UID",
-          "placeholder": ""
+          "label": "UID"
         }
       },
       "title": {
@@ -18,15 +17,6 @@
         "config": {
           "label": "Title",
           "placeholder": ""
-        }
-      },
-      "right_column_text": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Right Column Text",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
         }
       },
       "color": {
@@ -52,12 +42,6 @@
         "config": {
           "choices": {
             "big_text": {
-              "type": "SharedSlice"
-            },
-            "image": {
-              "type": "SharedSlice"
-            },
-            "title_text": {
               "type": "SharedSlice"
             }
           }

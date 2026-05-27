@@ -3,6 +3,7 @@
   "label": "Home",
   "repeatable": false,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "title": {
@@ -10,6 +11,22 @@
         "config": {
           "label": "Title",
           "placeholder": ""
+        }
+      },
+      "projects": {
+        "type": "Group",
+        "config": {
+          "label": "Projects",
+          "fields": {
+            "project": {
+              "type": "Link",
+              "config": {
+                "label": "Project",
+                "select": "document",
+                "customtypes": ["project"]
+              }
+            }
+          }
         }
       },
       "intro": {
@@ -24,34 +41,17 @@
       "right_column_text": {
         "type": "StructuredText",
         "config": {
-          "label": "Right Column Text",
+          "label": "Right Column Text (will be removed)",
           "placeholder": "",
           "allowTargetBlank": true,
-          "multi": "paragraph,hyperlink,list-item,o-list-item,strong,em"
-        }
-      },
-      "projects": {
-        "type": "Group",
-        "config": {
-          "label": "Projects",
-          "fields": {
-            "project": {
-              "type": "Link",
-              "config": {
-                "label": "Project",
-                "select": "document",
-                "customtypes": [
-                  "project"
-                ]
-              }
-            }
-          }
+          "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
         }
       },
       "menu": {
         "type": "Group",
         "config": {
-          "label": "Menu",
+          "label": "Menu (will be removed)",
+          "repeat": true,
           "fields": {
             "link": {
               "type": "Link",

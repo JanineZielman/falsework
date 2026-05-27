@@ -1,36 +1,36 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {},
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "title",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "lamp",
-              "type": "Text"
-            }
-          ],
-          [
-            "text",
-            {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Cupidatat irure nisi mollit ut ad enim et commodo nostrud Lorem. Sunt ut commodo commodo."
-                  }
-                }
-              ]
-            }
-          ]
-        ]
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "lamp",
+							"type": "Text"
+						}
+					],
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Sunt incididunt consequat est in nulla. Aliquip excepteur aliquip pariatur Lorem aute ex dolore nostrud eu consectetur nulla laborum."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
 ]

@@ -1,0 +1,189 @@
+[
+  {
+    "title": {
+      "__TYPE__": "FieldContent",
+      "value": "swimming",
+      "type": "Text"
+    },
+    "intro": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Sint incididunt exercitation excepteur exercitation deserunt ex Lorem commodo eiusmod fugiat. Mollit duis pariatur Lorem in ea labore fugiat officia."
+          }
+        }
+      ]
+    },
+    "right_column_text": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Et pariatur cupidatat enim cillum ipsum consequat ex id nisi tempor elit proident non consequat quis."
+          }
+        }
+      ]
+    },
+    "projects": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "project",
+              {
+                "__TYPE__": "LinkContent",
+                "key": "05164672-3882-406f-85c6-3d854adfcc80",
+                "value": {
+                  "__TYPE__": "DocumentLink",
+                  "id": "mock_document_id"
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "menu": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "link",
+              {
+                "__TYPE__": "LinkContent",
+                "key": "5a52c3a6-1dc2-4f93-9585-abac5ffac811",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "https://slicemachine.dev"
+                }
+              }
+            ],
+            [
+              "label",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "found",
+                "type": "Text"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": [
+        {
+          "key": "big_text$c6ee4fc1-9a4e-494e-a563-c7a8306d7448",
+          "name": "big_text",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "big_text": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Nisi amet deserunt sint."
+                    }
+                  }
+                ]
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "image$caf5a17e-8b74-4104-8e70-f20e367fb16c",
+          "name": "image",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "image": {
+                "__TYPE__": "ImageContent",
+                "origin": {
+                  "id": "main",
+                  "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+                  "width": 4752,
+                  "height": 3168
+                },
+                "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?rect=2%2C0%2C4748%2C3168&w=640&h=427",
+                "width": 640,
+                "height": 427,
+                "edit": {
+                  "zoom": 1,
+                  "crop": {
+                    "x": 2,
+                    "y": 0
+                  },
+                  "background": "transparent"
+                },
+                "alt": "bridge",
+                "thumbnails": {}
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "title_text$fbe72f60-ce7f-4baf-8ffc-1eef434074cf",
+          "name": "title_text",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {},
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": [
+                  [
+                    "title",
+                    {
+                      "__TYPE__": "FieldContent",
+                      "value": "task",
+                      "type": "Text"
+                    }
+                  ],
+                  [
+                    "text",
+                    {
+                      "__TYPE__": "StructuredTextContent",
+                      "value": [
+                        {
+                          "type": "paragraph",
+                          "content": {
+                            "text": "Proident enim consectetur anim labore veniam laboris excepteur quis quis in est. Irure non et quis sunt tempor nulla amet do enim commodo."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]
